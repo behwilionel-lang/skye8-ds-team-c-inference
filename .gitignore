@@ -1,0 +1,19 @@
+#python
+__pyache__/
+*.py[cod]
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+#Environment Variables / secrets
+.env
+.env.*
+|.env.example
+
+#Data files
+*.csv
+
+#Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
