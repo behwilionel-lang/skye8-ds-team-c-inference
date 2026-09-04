@@ -50,3 +50,17 @@ SELECT
 FROM variant_timing t
 ORDER BY t.experiment_id, t.variant;
 
+#THIS QUERIES IS FOR THE ASSIGNMENT TIMING CKECKS
+	#This query finds users who have events but were not assigned.
+		SELECT DISTINCT e.experiment_id, e.user_id
+		FROM public.events e
+		LEFT JOIN public.assignments a
+			ON e.experiment_id = a.experiment_id
+			AND e.user_id = a.user_id
+		WHERE a.assignment_id IS NULL;
+	# The result of the query is an empty table showing that the was no user with events and were never assigned.
+	#This query finds users who ended up in both control and treatment groups for the same experiment.
+		SELECT experiment_id, user_id, COUNT(DISTINCT variant) AS variant_count
+		FROM public.assignments 
+		GROUP BY experiment_id, user_id
+		HAVING COUNT(DISTINCT variant) > 1;
