@@ -10,7 +10,7 @@ JOIN public.experiments ex ON a.experiment_id = ex.experiment_id
 GROUP BY a.experiment_id, ex.planned_split, a.variant
 ORDER BY a.experiment_id, a.variant;
 
-#changes the date style and brings in the experiment's planned windows to compare against
+#changes the date style and brings in the experiments planned windows to compare against
 SELECT 
 	a.experiment_id,
 	a.variant,

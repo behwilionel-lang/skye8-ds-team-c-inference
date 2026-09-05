@@ -43,6 +43,25 @@ the EXP-001 one so not calling this a confirmed reversal.
 Do not ship. Effect basically 0, power 16%. Nothing here at all.
 
 ## Team note
+CUPED didn't help any of the 8 experiments. Pre period revenue barely
+matches during test revenue anywhere, never above 0.01 correlation. So
+past spending doesn't predict spending during the test. Worth telling
+the head of product, either the 28 day window is wrong or revenue is
+just too random per person for this to work here.
+
+
+
+#  Statistical Review
+
+- Overall inference: Most experiments were underpowered for detecting a 2% relative lift. Therefore, non-significant results should be described as "insufficient evidence", not proof of no effect.
+- Multiplicity: After Bonferroni correction for 8 experiments (α = 0.00625), EXP-004 remains significan, while EXP-002 no longer does.
+- Segment reversal: EXP-001 had an overall +0.90 pp effect, but Ghana fell by 11.83 pp while Cameroon increased by 4.04 pp. Averages can therefore hide serious subgroup harm.
+- Unstable effect: EXP-007 ranged from −3.73 pp to +1.04 pp during the experiment, so its final positive estimate should not be treated as a stable effect.
+- Revenue: EXP-003 and EXP-009 had extreme revenue skew. Bootstrap intervals included zero, providing no convincing evidence of a reliable revenue increase.
+- Bayesian evidence: EXP-002 and EXP-004 showed high posterior probability of treatment being better than control, but multiplicity and experimental design still matter for the final decision.
+- Sequential testing: EXP-002 repeatedly crossed the 0.05 threshold during the experiment, highlighting the need for predefined stopping rules.
+
+- Statistical conclusion: EXP-004 provides the strongest evidence for rollout. The remaining experiments should not be treated as confirmed wins without stronger evidence.
 Power was under 25% for every single experiment. So most of these do
 not ship calls just mean we didn't have enough people to know, not that
 we proved anything doesn't work. Need way bigger sample sizes going
